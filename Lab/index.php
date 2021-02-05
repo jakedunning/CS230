@@ -24,7 +24,7 @@
                     <h2>CFO</h2>
                     <p style="color: pink">Patrick</p>
                     <p>Email: patstar@bikinibottom.net</p>
-                    <p>"Spongebob is my best friend"</php>
+                    <p>"Spongebob is my bestest friend"</php>
                 </div>
             </div>
         </div>
