@@ -49,8 +49,7 @@ require 'includes/header.php';
                             required="required">
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="login-submit"
-                            class="btn btn-lg btn-outline-danger btn-block">Login</button>
+                        <button type="submit" name="login-submit" class="btn btn-lg btn-outline-danger btn-block">Login</button>
                     </div>
                 </form>
 
