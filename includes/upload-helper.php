@@ -1,6 +1,7 @@
 <?php
-
+ 
 require 'dbhandler.php';
+
 session_start();
 
 define('MB', 1048576);
