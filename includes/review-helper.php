@@ -2,7 +2,7 @@
 require_once 'dbhandler.php';
 date_default_timezone_set('UTC');
 
-if(isset($_POST['login-submit'])){
+if(isset( $_POST['login-submit'])){
     session_start();
     $uname = $_SESSION['uname'];
     $title = $_POST['review-title'];

@@ -32,7 +32,7 @@ if (isset($_POST['gallery-submit'])){
     }
     if ($file_size > 4*MB){
         header("Location: ../admin.php?error=FileSizeExceeded");
-        exit();
+         exit();
     }
 
     else{

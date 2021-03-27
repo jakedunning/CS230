@@ -21,7 +21,7 @@ echo ' <div class="container" style="text-align: center;">
 </div>';
 
 function stars($av){
-    $s = "";
+    $s = " ";
     if ($av == 0) {
         for ($i=0; $i < 5; $i++) { 
             $s .= '<i class="fa fa-star fa-2x" style="color:grey"></i>';
