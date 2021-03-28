@@ -1,7 +1,6 @@
 <?php
  
 require 'dbhandler.php';
-
 session_start();
 
 define('MB', 1048576);
@@ -20,12 +19,12 @@ if (isset($_POST['prof-submit'])){
 
     $allowed = array('jpg','jpeg','png','svg');
 
-    if ($file_error != 0){
+    if ($file_error !== 0){
         header("Location: ../profile.php?error=UploadError");
         exit();
     }
 
-    if (in_array($ext, $allowed)){
+    if (!in_array($ext, $allowed)){
         header("Location: ../profile.php?error=InvalidType");
         exit();
     }
