@@ -1,11 +1,10 @@
 <?php
  
 require 'dbhandler.php';
-
 session_start();
 
-define('MB', 1048576);
 define('KB', 1024);
+define('MB', 1048576);
 
 if (isset($_POST['gallery-submit'])){
     
@@ -17,16 +16,17 @@ if (isset($_POST['gallery-submit'])){
 
     $title = $_POST['title'];
     $descript = $_POST['descript'];
+
     $ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 
     $allowed = array('jpg','jpeg','png','svg');
 
-    if ($file_error != 0){
+    if ($file_error !== 0){
         header("Location: ../admin.php?error=UploadError");
         exit();
     }
 
-    if (in_array($ext, $allowed)){
+    if (!in_array($ext, $allowed)){
         header("Location: ../admin.php?error=InvalidType");
         exit();
     }
@@ -40,10 +40,11 @@ if (isset($_POST['gallery-submit'])){
 
         $destination = '../gallery/'.$new_name;
 
-        $sql = "INSERT INTO gallery (title, descript,picpath) VALUES (?,?,?)";
-        $stmt = mysqli_stm_init($conn);
+        $sql = "INSERT INTO gallery (title, descript, picpath) VALUES (?,?,?) ";
+        $stmt = mysqli_stmt_init($conn);
      
-        if(!mysqli_stmt_prepare($stmt, $sql)){
+        if(!mysqli_stmt_prepare($stmt, $sql))
+        {
             header("Location: ../admin.php?error=SQLInjection");
             exit();
         }else{

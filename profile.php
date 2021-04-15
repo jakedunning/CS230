@@ -29,7 +29,7 @@ if(isset($_SESSION['uid'])){
     $sqlpro = "SELECT * FROM profiles WHERE uname='$prof_user';";
     $res = mysqli_query($conn, $sqlpro);
     $row = mysqli_fetch_array($res);
-    $photo = $ro['profpic'];//path to the profile picture
+    $photo = $row['profpic'];//path to the profile picture
 
 ?>
     <div class="h-50 center-me text-center">
@@ -37,10 +37,10 @@ if(isset($_SESSION['uid'])){
 
             <form action="includes/upload-helper.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <img src="<?php echo $photo;?>" alt="profile pic" onclick="triggered(*);" id="prof-display">
+                    <img src="<?php echo $photo; ?>" alt="profile pic" onclick="triggered();" id="prof-display">
 
                     <label for="prof-image" id="uname-style"><?php echo $prof_user?></label>
-                    <input type="file" name="prof-image" id="prof=image" onchange="preview(this)" class="form-control"
+                    <input type="file" name="prof-image" id="prof-image" onchange="preview(this)" class="form-control"
                         style="display: none;">
                 </div>
                 <div class="form-group">

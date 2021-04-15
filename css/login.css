@@ -24,7 +24,7 @@ input{
     margin-bottom: 10px;
 }
 
-.carousel-inner .item a img{
+img{
     max-width: 500px;
     max-height: 200px;
     margin: auto;

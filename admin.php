@@ -8,7 +8,7 @@ require 'includes/dbhandler.php';
     <link rel="stylesheet" href="css/profile.css">
     <script>
     function triggered() {
-        document.querySelector("#galler-image").click();
+        document.querySelector("#gallery-image").click();
     }
 
     function preview(e) {
@@ -31,10 +31,10 @@ if(isset($_SESSION['uid'])){
 
             <form action="includes/gallery-helper.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <img src="images/MrKrabs.jpeg" alt="profile pic" onclick="triggered(*);" id="gallery-display">
+                    <img src="images/MrKrabs.jpeg" alt="profile pic" onclick="triggered();" id="gallery-display">
 
                     <input type="text" name="title" class="form-control" placeholder="title">
-                    <input type="file" name="gallery-image" id="gallery=image" onchange="preview(this)" class="form-control"
+                    <input type="file" name="gallery-image" id="gallery-image" onchange="preview(this)" class="form-control"
                         style="display: none;">
                 </div>
                 <div class="form-group">

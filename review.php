@@ -29,7 +29,7 @@ require 'includes/review-helper.php';
                     <input type="hidden" name="item_id" value="<?php echo $_GET['id'];?>">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-outline-danger" type="submit" id="review-submit"
+                    <button class="btn btn-outline-danger" type="submit" name="review-submit" id="review-submit"
                         style="width: 100%">Review</button>
                 </div>
             </form>

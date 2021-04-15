@@ -14,7 +14,8 @@ $row2 = mysqli_fetch_array($query2);
 
 $avg = round($row['AVGRATE'],1);
 
-echo ' <div class="container" style="text-align: center;">
+echo'
+<div class="container" style="text-align: center;">
 <h1>'.$avg.'</h1>
 <div class="container" style="margin-bottom: 10px;">'.stars($avg).'</div>
 <p>Number of ratings: '.round($row2['Total'], 1).'</p>
